@@ -47,7 +47,7 @@
   background: linear-gradient(to bottom, rgb(163, 97, 170), rgb(142, 33, 142));
 }
 .dock .icon:hover {
-  transform: scale(1.19) translateY(-33%);
+  transform: scale(1.19) translateY(-40%);
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .dock .icon:hover + .icon,

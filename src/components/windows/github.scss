@@ -1,0 +1,63 @@
+.cards{
+    overflow: scroll;
+    height: 100%;
+    padding: 0.75rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding-bottom: 10rem;
+    justify-content: flex-start;
+
+    .card{
+        flex-grow:1;
+        flex-basis: 15rem;
+        max-width: 17rem;
+        padding-inline: 0.75rem;
+        padding-block: 0.5rem;
+        background-color: #ffffff1f;
+        border-radius: 0.45rem;
+        color: rgb(211, 211, 211);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 0.45rem;
+        }
+        h1{
+            font-size: 1.1rem;
+        }
+        .description{
+            font-size: 0.8rem;
+            color: rgb(168,168,168);
+            line-height: 1.1rem;
+            opacity: 0.8;
+            word-spacing: 0.123rem;
+        }
+        .tags{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            .tag{
+                background-color: #ffffff1f;
+                border-radius: 0.45rem;
+                padding: 0.25rem 0.5rem;
+                font-size: 0.65rem;
+                 width: fit-content;
+                 color: rgb(168,168,168);
+                 white-space: nowrap;
+            }
+        }
+        .urls{
+            display: flex;
+            gap: 0.5rem;
+            a{
+                // background-color: #ffffff1f;
+                font-size: 0.8rem;
+                border-radius: 0.45rem;
+                color: rgb(255, 255, 255);
+            }
+        }
+    }
+}
