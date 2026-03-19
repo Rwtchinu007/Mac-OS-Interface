@@ -1,0 +1,46 @@
+.cli-wrapper {
+  height: 100%;
+  padding: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background: transparent;
+  color: #e6e6e6;
+
+  font-family: "Menlo", monospace;
+  font-size: 13px;
+  padding-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* THIS FIXES FLEX OVERFLOW BUG */
+.window .main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.cli-line {
+  margin-bottom: 4px;
+  white-space: pre-wrap;
+}
+
+.cli-input-line {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.prompt {
+  color: #00ff9c;
+  margin-right: 6px;
+}
+
+.cli-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #00ff9c;
+  font-family: inherit;
+  width: 100%;
+}

@@ -3,10 +3,24 @@
   // flex-direction: column;
   background-color: #000000e7;
   border-radius: 0.45rem;
-  height:100%;
+  height: 100%;
+  display: flex; // ✅ ADD THIS
+  flex-direction: column; // ✅ ADD THIS
+
   overflow: hidden;
-  color: rgb(168,168,168);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(168, 168, 168);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
   font-weight: 500;
   font-size: 0.9rem;
 
@@ -25,6 +39,7 @@
         width: 14px;
         border-radius: 50%;
         background-color: #ffffff;
+        cursor: pointer;
       }
       .red {
         background-color: rgb(212, 84, 93);
@@ -36,30 +51,27 @@
         background-color: rgb(0, 202, 78);
       }
     }
-
   }
-  .main-content{
-    height: 100%;
+  .main-content {
+    flex: 1;
+    overflow: hidden;
+    min-height: 0;
   }
-  *::-webkit-scrollbar{
+  *::-webkit-scrollbar {
     width: 7px;
     height: 8px;
-
   }
-  *::-webkit-scrollbar-track{
+  *::-webkit-scrollbar-track {
     background-color: transparent;
   }
-  *::-webkit-scrollbar-thumb{
+  *::-webkit-scrollbar-thumb {
     background-color: #6b6b6b8a;
     border-radius: 0.45rem;
   }
-  *::-webkit-scrollbar-thumb:hover{
+  *::-webkit-scrollbar-thumb:hover {
     background-color: #6b6b6b;
   }
-  *::-webkit-scrollbar-thumb:active{
-    background-color: #6b6b6b;
-  }
-  *::-webkit-scrollbar-thumb:focus{
+  *::-webkit-scrollbar-thumb:active {
     background-color: #6b6b6b;
   }
 }

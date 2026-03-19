@@ -6,7 +6,7 @@ import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import MacWindow from "./MacWindow";
 import "./notes.scss";
 
-const Note = () => {
+const Note = ({ windowName, setWindowsState, windowsState }) => {
   const [markdown, setMarkdown] = useState(null);
   useEffect(() => {
     fetch("/note.txt")
@@ -14,7 +14,13 @@ const Note = () => {
       .then((data) => setMarkdown(data));
   }, []);
   return (
-    <MacWindow>
+    <MacWindow
+      windowName={windowName}
+      windowsState={windowsState}
+      setWindowsState={setWindowsState}
+      width="48vw"
+      height="62vh"
+    >
       <div className="note-window">
         {markdown ? (
           <SyntaxHighlighter

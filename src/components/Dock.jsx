@@ -1,31 +1,74 @@
 import React from "react";
-import './dock.scss'
+import "./dock.scss";
 
-const Dock = () => {
+const Dock = ({ windowsState, setWindowsState }) => {
   return (
     <footer className="dock">
-      <div className="icon github">
+      <div
+        onClick={() => {
+          setWindowsState((state) => ({ ...state, github: true }));
+        }}
+        className="icon github"
+      >
         <img src="/doc-icons/github.svg" alt="" />
       </div>
-      <div className="icon note">
+      <div
+        onClick={() => {
+          setWindowsState((state) => ({ ...state, note: true }));
+        }}
+        className="icon note"
+      >
         <img src="/doc-icons/note.svg" alt="" />
       </div>
-      <div className="icon pdf">
+      <div
+        onClick={() => {
+          setWindowsState((state) => ({ ...state, resume: true }));
+        }}
+        className="icon pdf"
+      >
         <img src="/doc-icons/pdf.svg" alt="" />
       </div>
-      <div className="icon calender">
+      <div
+        onClick={() => {
+          setWindowsState((state) => ({ ...state, calender: true }));
+        }}
+        className="icon calender"
+      >
         <img src="/doc-icons/calender.svg" alt="" />
       </div>
-      <div className="icon spotify">
+      <div
+        onClick={() => {
+          setWindowsState((state) => ({ ...state, spotify: true }));
+        }}
+        className="icon spotify"
+      >
         <img src="/doc-icons/spotify.svg" alt="" />
       </div>
-      <div className="icon mail">
+      <div
+        className="icon mail"
+        onClick={() => {
+          setWindowsState((state) => ({ ...state, mail: true }));
+        }}
+      >
         <img src="/doc-icons/mail.svg" alt="" />
       </div>
-      <div className="icon link">
+      <div
+        className="icon link"
+        onClick={() => {
+          window.open(
+            "https://www.linkedin.com/in/kshitiz-rawat0806",
+            "_blank",
+          );
+        }}
+      >
         <img src="/doc-icons/link.svg" alt="" />
       </div>
-      <div className="icon cli">
+      <div
+        onClick={() => {
+          setWindowsState((state) => ({ ...state, cli: true }));
+        }}
+        className="icon cli"
+      >
         <img src="/doc-icons/cli.svg" alt="" />
       </div>
     </footer>

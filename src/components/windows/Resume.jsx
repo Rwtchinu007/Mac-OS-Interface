@@ -11,12 +11,18 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url,
 ).toString();
 
-const Resume = () => {
+const Resume = ({ windowName, setWindowsState, windowsState }) => {
   const [numPages, setNumPages] = useState(null);
   const [pdfError, setPdfError] = useState("");
 
   return (
-    <MacWindow>
+    <MacWindow
+      windowName={windowName}
+      windowsState={windowsState}
+      setWindowsState={setWindowsState}
+      width="56vw"
+      height="72vh"
+    >
       <div className="resume-window">
         <Document
           file="/resume.pdf"
