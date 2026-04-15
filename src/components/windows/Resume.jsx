@@ -25,7 +25,7 @@ const Resume = ({ windowName, setWindowsState, windowsState }) => {
     >
       <div className="resume-window">
         <Document
-          file="/resume.pdf"
+          file={`${import.meta.env.BASE_URL}resume.pdf`}
           loading={<p>Loading PDF...</p>}
           onLoadError={(error) =>
             setPdfError(error?.message || "Failed to load PDF")

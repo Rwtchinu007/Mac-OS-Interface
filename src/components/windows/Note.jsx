@@ -9,7 +9,7 @@ import "./notes.scss";
 const Note = ({ windowName, setWindowsState, windowsState }) => {
   const [markdown, setMarkdown] = useState(null);
   useEffect(() => {
-    fetch("/note.txt")
+    fetch(`${import.meta.env.BASE_URL}note.txt`)
       .then((response) => response.text())
       .then((data) => setMarkdown(data));
   }, []);

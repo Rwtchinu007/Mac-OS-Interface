@@ -2,6 +2,8 @@ import React from "react";
 import "./dock.scss";
 
 const Dock = ({ windowsState, setWindowsState }) => {
+  const assetPath = (path) => `${import.meta.env.BASE_URL}${path}`;
+
   return (
     <footer className="dock">
       <div
@@ -10,7 +12,7 @@ const Dock = ({ windowsState, setWindowsState }) => {
         }}
         className="icon github"
       >
-        <img src="/doc-icons/github.svg" alt="" />
+        <img src={assetPath("doc-icons/github.svg")} alt="" />
       </div>
       <div
         onClick={() => {
@@ -18,7 +20,7 @@ const Dock = ({ windowsState, setWindowsState }) => {
         }}
         className="icon note"
       >
-        <img src="/doc-icons/note.svg" alt="" />
+        <img src={assetPath("doc-icons/note.svg")} alt="" />
       </div>
       <div
         onClick={() => {
@@ -26,7 +28,7 @@ const Dock = ({ windowsState, setWindowsState }) => {
         }}
         className="icon pdf"
       >
-        <img src="/doc-icons/pdf.svg" alt="" />
+        <img src={assetPath("doc-icons/pdf.svg")} alt="" />
       </div>
       <div
         onClick={() => {
@@ -34,7 +36,7 @@ const Dock = ({ windowsState, setWindowsState }) => {
         }}
         className="icon calender"
       >
-        <img src="/doc-icons/calender.svg" alt="" />
+        <img src={assetPath("doc-icons/calender.svg")} alt="" />
       </div>
       <div
         onClick={() => {
@@ -42,7 +44,7 @@ const Dock = ({ windowsState, setWindowsState }) => {
         }}
         className="icon spotify"
       >
-        <img src="/doc-icons/spotify.svg" alt="" />
+        <img src={assetPath("doc-icons/spotify.svg")} alt="" />
       </div>
       <div
         className="icon mail"
@@ -50,7 +52,7 @@ const Dock = ({ windowsState, setWindowsState }) => {
           setWindowsState((state) => ({ ...state, mail: true }));
         }}
       >
-        <img src="/doc-icons/mail.svg" alt="" />
+        <img src={assetPath("doc-icons/mail.svg")} alt="" />
       </div>
       <div
         className="icon link"
@@ -61,7 +63,7 @@ const Dock = ({ windowsState, setWindowsState }) => {
           );
         }}
       >
-        <img src="/doc-icons/link.svg" alt="" />
+        <img src={assetPath("doc-icons/link.svg")} alt="" />
       </div>
       <div
         onClick={() => {
@@ -69,7 +71,7 @@ const Dock = ({ windowsState, setWindowsState }) => {
         }}
         className="icon cli"
       >
-        <img src="/doc-icons/cli.svg" alt="" />
+        <img src={assetPath("doc-icons/cli.svg")} alt="" />
       </div>
     </footer>
   );

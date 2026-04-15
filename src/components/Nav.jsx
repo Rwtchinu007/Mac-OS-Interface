@@ -1,36 +1,39 @@
-import React from 'react'
-import './nav.scss'
-import DateTime from './DateTime'
+import React from "react";
+import "./nav.scss";
+import DateTime from "./DateTime";
 
 const Nav = () => {
+  const assetPath = (path) => `${import.meta.env.BASE_URL}${path}`;
+
   return (
     <nav>
-        <div className="left">
-            <div className="apple-icon"><img src="./nav-icons/apple.svg" alt="" /></div>
-             <div className="nav-item">
-            <p>Kshitiz Rawat</p>
+      <div className="left">
+        <div className="apple-icon">
+          <img src={assetPath("nav-icons/apple.svg")} alt="" />
         </div>
         <div className="nav-item">
-            <p>File</p>
+          <p>Kshitiz Rawat</p>
         </div>
         <div className="nav-item">
-            <p>Window</p>
+          <p>File</p>
         </div>
         <div className="nav-item">
-            <p>Terminal</p>
+          <p>Window</p>
         </div>
+        <div className="nav-item">
+          <p>Terminal</p>
         </div>
-        <div className="right">
-            <div className="nav-icon">
-                <img src="./nav-icons/wifi.svg" alt="" />
-            </div>
-            <div className="nav-item">
-            <DateTime/>
+      </div>
+      <div className="right">
+        <div className="nav-icon">
+          <img src={assetPath("nav-icons/wifi.svg")} alt="" />
         </div>
-
+        <div className="nav-item">
+          <DateTime />
         </div>
+      </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;
